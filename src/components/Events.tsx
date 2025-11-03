@@ -354,8 +354,8 @@ const Events = () => {
                   </div>
 
                   {/* Back Face */}
-                  <div className="absolute inset-0 rounded-2xl overflow-hidden bg-card border border-border [backface-visibility:hidden] [transform:rotateY(180deg)] pointer-events-auto">
-                    <div className="h-full p-4 flex flex-col justify-between pointer-events-auto">
+                  <div className="absolute inset-0 rounded-2xl overflow-hidden bg-card border border-border [backface-visibility:hidden] [transform:rotateY(180deg)] pointer-events-auto min-h-[400px]">
+                    <div className="h-full p-6 flex flex-col justify-between pointer-events-auto">
                       <div className="space-y-3">
                         <h3 className="text-xl font-bold text-foreground line-clamp-2">
                           {event.title}
