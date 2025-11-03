@@ -320,13 +320,13 @@ const Events = () => {
                   {/* Front Face */}
                   <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden] pointer-events-none">
                     {event.banner_url ? (
-                      <div className="relative w-full">
+                      <div className="relative w-full min-h-[400px] flex items-center justify-center bg-muted/30">
                         <img 
                           src={event.banner_url} 
                           alt={event.title} 
                           loading="lazy"
                           decoding="async"
-                          className="w-full h-auto object-contain rounded-2xl" 
+                          className="w-full h-auto object-contain rounded-2xl"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-2xl"></div>
                       </div>
