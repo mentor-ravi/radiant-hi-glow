@@ -300,7 +300,7 @@ const Events = () => {
             // Loading skeletons
             <>
               {[1, 2, 3].map((i) => (
-                <div key={i} className="h-[360px]">
+                <div key={i} className="min-h-[400px]">
                   <Skeleton className="w-full h-full rounded-2xl" />
                 </div>
               ))}
@@ -315,20 +315,20 @@ const Events = () => {
           ) : (
             // Actual event cards
             events.map((event) => (
-              <div key={event.id} className="group h-[360px] [perspective:1000px] animate-fade-in">
-                <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              <div key={event.id} className="group [perspective:1000px] animate-fade-in">
+                <div className="relative w-full min-h-[400px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Front Face */}
                   <div className="absolute inset-0 rounded-2xl overflow-hidden [backface-visibility:hidden] pointer-events-none">
                     {event.banner_url ? (
-                      <div className="absolute inset-0">
+                      <div className="relative w-full">
                         <img 
                           src={event.banner_url} 
                           alt={event.title} 
                           loading="lazy"
                           decoding="async"
-                          className="w-full h-full object-cover" 
+                          className="w-full h-auto object-contain rounded-2xl" 
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-2xl"></div>
                       </div>
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30">
